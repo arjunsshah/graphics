@@ -1,0 +1,49 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build OpenGL Project",
+        "type": "shell",
+        "command": "/usr/bin/clang",
+        "args": [
+            "-std=c++17",
+            "-fdiagnostics-color=always",
+            "-Wall",
+            "-g",
+            "-I${workspaceFolder}/include",
+            "-L${workspaceFolder}/lib",
+            "${workspaceFolder}/src/glad.c",
+            "${workspaceFolder}/src/*.cpp",
+            "${workspaceFolder}/lib/libglfw.3.dylib",
+            "-o",
+            "${workspaceFolder}/main.exe",
+            "-framework",
+            "OpenGL"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Compile the OpenGL project"
+      },
+      {
+        "label": "Run OpenGL Project",
+        "type": "shell",
+        "command": "${workspaceFolder}/bin/main", // Path to your compiled executable
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared",
+          "showReuseMessage": true,
+          "clear": false
+        }
+      }
+    ]
+  }
+  
