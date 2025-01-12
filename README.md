@@ -1,2 +1,1 @@
-# graphics
-learning 3d graphics
+# Learning OpenGL Graphics
