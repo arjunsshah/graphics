@@ -1,9 +1,3 @@
-// BUILD PROJECT: 
-// clang++ -std=c++17 -I./include -L/opt/homebrew/lib -lglfw -framework OpenGL -framework CoreFoundation ./src/main.cpp ./src/glad.c -o ./bin/main
-
-// RUN PROJECT:
-// ./bin/main
-
 
 #include "../include/glad/glad.h"
 #include "../include/GLFW/glfw3.h"
@@ -32,7 +26,7 @@ int main()
 
     // glfw window creation
     // --------------------
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "NEW WINDOW NAME", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "TEST WIasdasdasNDOW", NULL, NULL);
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -60,7 +54,7 @@ int main()
 
         // render
         // ------
-        glClearColor(0.3f, 0.0f, 0.0f, 0.0f);
+        glClearColor(0.0f, 0.0f, 0.6f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
