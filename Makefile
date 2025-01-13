@@ -13,7 +13,7 @@ GLAD_SRC = ./src/glad.c
 BIN_DIR = ./01_3D_Graphics_Basics/code/bin
 SRC_DIR = ./01_3D_Graphics_Basics/code/src
 
-FILE_NAME = shading_example.cpp
+FILE_NAME = camera_class.cpp
 TARGET_NAME = $(basename $(FILE_NAME))
 
 
